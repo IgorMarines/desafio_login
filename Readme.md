@@ -70,7 +70,19 @@ python manage.py migrate
 python manage.py createsuperuser
 ```
 
-### 6. Rodar o Servidor
+### 6. Configurar o Envio de E-mails (Opcional)
+Para habilitar o envio de e-mails de confirmação, crie um arquivo `.env` na raiz do projeto e configure suas credenciais SMTP:
+```env
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_HOST_USER=seuemail@gmail.com
+EMAIL_HOST_PASSWORD=suasenha
+EMAIL_USE_TLS=True
+```
+> **IMPORTANTE:** Caso essas configurações não sejam definidas no `.env`, nenhum e-mail de confirmação será enviado.
+> Um arquivo `.env.example` está disponível para referência.
+
+### 7. Rodar o Servidor
 ```bash
 python manage.py runserver
 ```
@@ -79,13 +91,13 @@ Acesse o sistema em: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 
 ## Estrutura do Projeto
 ```
-📂 desafio_login/
-│-- 📂 desafio_login/      # Configuração do Django
-│-- 📂 desafio_logins/     # Aplicação principal
-│-- 📂 ll_env/            # (Ignorado) Virtual Environment
-│-- 📂 db.sqlite3         # Banco de Dados SQLite
-│-- 📜 manage.py          # Comandos Django
-│-- 📜 requirements.txt   # Dependências do projeto
+📺 desafio_login/
+👉 desafio_login/      # Configuração do Django
+👉 desafio_logins/     # Aplicação principal
+👉 ll_env/            # (Ignorado) Virtual Environment
+👉 db.sqlite3         # Banco de Dados SQLite
+👉 manage.py          # Comandos Django
+👉 requirements.txt   # Dependências do projeto
 ```
 
 ## Funcionalidades
@@ -93,6 +105,7 @@ Acesse o sistema em: [http://127.0.0.1:8000](http://127.0.0.1:8000)
 - Login e Logout
 - Proteção CSRF
 - Mensagens de erro e sucesso
+- Envio de e-mails de confirmação (caso configurado)
 
 ## Observações
 - **A venv não deve ser enviada para o repositório!**
