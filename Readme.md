@@ -2,6 +2,31 @@
 
 Este projeto é uma aplicação Django simples para registro, login e logout de usuários utilizando SQLite.
 
+## Funcionalidades
+
+### Tela de Login
+- **Validação de credenciais:**
+  - E-mail errado, mas existente no banco: "E-mail inválido"
+  - Senha errada, mas existente no banco: "Senha inválida"
+  - E-mail inexistente no banco: "E-mail inexistente"
+  - Senha inexistente no banco: "Senha inexistente"
+- **Campos obrigatórios:** O e-mail e a senha não podem estar vazios.
+- **Redirecionamento:**
+  - Ao fazer login com sucesso, o usuário é direcionado para a tela de "Menu".
+  - O textbutton "Registrar" leva para a tela de "Registrar".
+
+### Tela de Registro
+- **Campos do formulário:**
+  - Nome (apenas letras, valida erro se inválido).
+  - E-mail (validação para aceitar apenas e-mails válidos com "@").
+  - Senha (deve conter ao menos 8 caracteres, 1 caractere especial, 1 número e 1 letra maiúscula).
+  - Confirmar senha (deve ser idêntico ao campo "senha").
+- **Exibição de senha:**
+  - Opção para visualizar ou ocultar a senha e a confirmação de senha.
+- **Botões:**
+  - "Registrar" para enviar o formulário.
+  - "Cancelar" para voltar à tela de login.
+
 ## Tecnologias Utilizadas
 - Python
 - Django
