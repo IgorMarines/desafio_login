@@ -12,7 +12,7 @@ Este projeto é uma aplicação Django simples para registro, login e logout de 
 
 ### 1. Clonar o Repositório
 ```bash
-git clone <URL_DO_REPOSITORIO>
+git clone https://github.com/IgorMarines/desafio_login.git
 cd desafio_login
 ```
 
